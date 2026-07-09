@@ -1,37 +1,28 @@
-// Header.jsx
-// =====================================================
-// Project Tracker – Header Component
-// =====================================================
-//
-// Guided Build Part 2: Create a Header component
-//
-// A component is a JavaScript function that returns JSX.
-// We define it here and export it so App.jsx can import and use it.
-//
-// This Header renders the page title, description, and navigation.
-// Navigation links use page anchors (#board, #summary, #about)
-// so the page scrolls to each section. No router is needed.
-//
-// When we write <Header /> in App.jsx, React calls this function
-// and renders whatever it returns.
-//
+import bundImg from "./assets/bundesliga_logo.jpg";
 
 function Header() {
   return (
     <>
-      <header>
-        <h1>Project Tracker</h1>
-        <p>Plan work clearly and track progress across your project board.</p>
-      </header>
       <nav aria-label="Primary">
-        <ul>
-          <li><a href="#board">Board</a></li>
-          <li><a href="#summary">Summary</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
+        <img src={bundImg} alt="Logo" className="nav-image" />
+        <p className="nav-title">Bundesliga 2022-23</p>
+        <div className="nav-links-container">
+          <a href="index.html" className="nav-link">
+            Home
+          </a>
+          <a href="teams.html" className="nav-link">
+            Teams
+          </a>
+          <a href="players.html" className="nav-link">
+            Players
+          </a>
+          <a href="matches.html" className="nav-link">
+            Matches
+          </a>
+        </div>
       </nav>
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
