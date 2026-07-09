@@ -6,15 +6,13 @@ import bundImg from "./assets/bundesliga_logo.jpg";
 
 import "./App.css";
 import Header from "./Header";
+import LeagueTable from "./LeagueTable";
 
 function App() {
-
   return (
     <>
-
-    <Header />
-
-
+      <Header />
+      <LeagueTable />
     </>
   );
 }

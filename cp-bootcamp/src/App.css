@@ -11,7 +11,7 @@ body {
 
 nav {
   background: linear-gradient(90deg, #d8a1ff, blueviolet);
-  height: 16vh;
+  height: 26vh;
   display: grid;
   grid-template-columns: 1fr auto 1fr; /* Creates three equal sections */
   align-items: center;
@@ -116,4 +116,12 @@ p {
   align-items: center;
   justify-content: center;
   color: blueviolet;
+}
+
+.table_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical alignment */
+  /* align-items: center; Horizontal alignment */
+  margin: 20px 290px;
 }
