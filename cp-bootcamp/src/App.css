@@ -116,6 +116,7 @@ p {
   align-items: center;
   justify-content: center;
   color: blueviolet;
+  margin-top: 30px;
 }
 
 .table_container {
@@ -125,3 +126,7 @@ p {
   /* align-items: center; Horizontal alignment */
   margin: 20px 290px;
 }
+
+/* ul {
+  list-style-type: none;
+} */

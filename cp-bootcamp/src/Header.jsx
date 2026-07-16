@@ -1,4 +1,5 @@
 import bundImg from "./assets/bundesliga_logo.jpg";
+import { NavLink } from "react-router";
 
 function Header() {
   return (
@@ -7,18 +8,26 @@ function Header() {
         <img src={bundImg} alt="Logo" className="nav-image" />
         <p className="nav-title">Bundesliga 2022-23</p>
         <div className="nav-links-container">
-          <a href="index.html" className="nav-link">
-            Home
-          </a>
-          <a href="teams.html" className="nav-link">
-            Teams
-          </a>
-          <a href="players.html" className="nav-link">
-            Players
-          </a>
-          <a href="matches.html" className="nav-link">
-            Matches
-          </a>
+          <li>
+            <NavLink to="/" end className="nav-link">
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/teams" end className="nav-link">
+              Teams
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/players" end className="nav-link">
+              Players
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/matches" end className="nav-link">
+              Matches
+            </NavLink>
+          </li>
         </div>
       </nav>
     </>

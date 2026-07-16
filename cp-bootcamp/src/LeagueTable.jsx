@@ -22,20 +22,22 @@ function LeagueTable() {
             // debugger;
             return response_b.text();
           })
-          .then((data) => {
+          .then((tableData) => {
             // console.log("response_b:");
             // console.log(response_b);
             // debugger;
             // const rows = data.split("\n");
-            const rows = data.split(/\r?\n/);
+            const rows = tableData.split(/\r?\n/);
             // console.log("rows:");
             // console.log(rows);
+            console.log(JSON.stringify(tableData));
             // console.log("rows[0]:");
             // console.log(rows[0]);
             // console.log("typeof rows[0]:");
             // console.log(typeof rows[0]);
 
             const parsedHeaders = rows[0].split(",");
+
             setHeaders(parsedHeaders); // Save headers to state
 
             // console.log("headers:");
