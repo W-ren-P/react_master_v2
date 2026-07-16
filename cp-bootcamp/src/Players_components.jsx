@@ -32,7 +32,7 @@ function Players_components() {
       <p className="page_subtitle">Leading scorers</p>
 
       {players.length === 0 ? (
-        <p>Loading players...</p>
+        <p>Loading player data...</p>
       ) : (
         <div className="table_container_b">
           <table>
