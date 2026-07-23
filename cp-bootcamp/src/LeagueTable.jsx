@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+const assetUrl = (file) => `${import.meta.env.BASE_URL}${file}`;
+
 function LeagueTable() {
   const [tableRows, setTableRows] = useState([]);
   const [headers, setHeaders] = useState([]);
 
   useEffect(() => {
-    fetch("master_dict.json")
+    fetch(assetUrl("master_dict.json"))
       .then((response) => response.text())
       .then((textData) => {
         const masterDict = JSON.parse(textData);
@@ -15,7 +17,7 @@ function LeagueTable() {
         // console.log(typeof masterDict);
         // debugger;
 
-        return fetch("bundesliga_table_2022_23.csv")
+        return fetch(assetUrl("bundesliga_table_2022_23.csv"))
           .then((response_b) => {
             // console.log("response_b:");
             // console.log(response_b);
@@ -134,28 +136,27 @@ function LeagueTable() {
 
   return (
     <div className="table_container">
-{tableRows.length === 0 ? (
+      {tableRows.length === 0 ? (
         <p>Loading league table...</p>
       ) : (
-
-      <table>
-        <thead>
-          <tr>
-            {headers.map((header, idx) => (
-              <th key={idx}>{header}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {tableRows.map((row, rowIdx) => (
-            <tr key={rowIdx}>
-              {row.map((cell, cellIdx) => (
-                <td key={cellIdx}>{cell}</td>
+        <table>
+          <thead>
+            <tr>
+              {headers.map((header, idx) => (
+                <th key={idx}>{header}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {tableRows.map((row, rowIdx) => (
+              <tr key={rowIdx}>
+                {row.map((cell, cellIdx) => (
+                  <td key={cellIdx}>{cell}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       )}
     </div>
   );
