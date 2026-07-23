@@ -145,7 +145,7 @@ p {
   margin: 20px 230px;
 }
 
-.table_container_b {
+.table_container_c {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertical alignment */
