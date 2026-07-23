@@ -13,11 +13,11 @@ function Header() {
               Home
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/teams" end className="nav-link">
               Teams
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/players" end className="nav-link">
               Players
