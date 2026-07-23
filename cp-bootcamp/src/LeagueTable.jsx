@@ -135,7 +135,7 @@ function LeagueTable() {
   }, []);
 
   return (
-    <div className="table_container_c">
+    <div className="table_container">
       {tableRows.length === 0 ? (
         <p>Loading league table...</p>
       ) : (
